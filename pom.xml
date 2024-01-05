@@ -18,7 +18,6 @@
         <module>ShopingCartService</module>
 		<module>PriceService</module>
 		<module>ProductService</module>
-        <module>ProductService</module>
     </modules>
     <properties>
 		<java.version>17</java.version>

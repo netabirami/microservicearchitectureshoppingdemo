@@ -15,6 +15,6 @@ public class ProductController {
 
     @GetMapping
     public ResponseEntity<String> getEvents() {
-        return ResponseEntity.ok(restTemplate.getForObject("http://localhost:8082/prices", String.class) +" Data from Product Service");
+        return ResponseEntity.ok(restTemplate.getForObject("http://price-service:8082/prices", String.class) +" Data from Product Service");
     }
 }

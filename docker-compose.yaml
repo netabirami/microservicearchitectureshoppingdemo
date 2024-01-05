@@ -1,0 +1,39 @@
+services:
+  shoping-cart-service:
+    container_name: shoping-cart-service
+    build:
+      context: ShopingCartService
+      dockerfile: Dockerfile
+    image: shoping-cart-service
+    ports:
+      - 8080:8080
+    networks:
+      - first-network
+
+  product-service:
+    container_name: product-service
+    build:
+      context: ProductService
+      dockerfile: Dockerfile
+    image: product-service
+    ports:
+      - 8081:8081
+    networks:
+      - first-network
+
+  price-service:
+    container_name: price-service
+    build:
+      context: PriceService
+      dockerfile: Dockerfile
+    image: price-service
+    ports:
+      - 8082:8082
+    networks:
+      - first-network
+
+networks:
+  first-network:
+    driver: bridge
+  second-network:
+    driver: bridge

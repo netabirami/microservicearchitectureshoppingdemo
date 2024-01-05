@@ -16,6 +16,6 @@ public class ShoppingCartController {
 
     @GetMapping
     public ResponseEntity<String> getClient() {
-        return ResponseEntity.ok(restTemplate.getForObject("http://localhost:8081/products", String.class)+ " + Data from shopping cart service");
+        return ResponseEntity.ok(restTemplate.getForObject("http://product-service:8081/products", String.class)+ " + Data from shopping cart service");
     }
 }
